@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+httpx
+prometheus-fastapi-instrumentator
+pydantic
+kafka-python
+pandas
+pyarrow
+redis
+qdrant-client
+requests
+pytest
+mlflow
+langsmith
+numpy
