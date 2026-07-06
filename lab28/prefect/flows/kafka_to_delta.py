@@ -13,14 +13,18 @@ from kafka import KafkaConsumer
 try:
     from prefect import flow, task
 except Exception:
-    def task(*_args: Any, **_kwargs: Any):
+    def task(_func: Callable | None = None, *_args: Any, **_kwargs: Any):
         def decorator(func: Callable):
             return func
+        if callable(_func):
+            return _func
         return decorator
 
-    def flow(*_args: Any, **_kwargs: Any):
+    def flow(_func: Callable | None = None, *_args: Any, **_kwargs: Any):
         def decorator(func: Callable):
             return func
+        if callable(_func):
+            return _func
         return decorator
 
 KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "kafka:29092")
