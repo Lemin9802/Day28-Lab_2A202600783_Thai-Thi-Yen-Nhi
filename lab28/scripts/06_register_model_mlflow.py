@@ -7,7 +7,8 @@ import mlflow
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", f"file:{PROJECT_ROOT / 'mlruns'}")
+DEFAULT_MLFLOW_DB = (PROJECT_ROOT / "mlflow.db").as_posix()
+MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", f"sqlite:///{DEFAULT_MLFLOW_DB}")
 REGISTERED_MODEL_NAME = os.getenv("MLFLOW_REGISTERED_MODEL_NAME", "lab28-fallback-llm")
 
 
