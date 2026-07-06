@@ -2,6 +2,16 @@
 
 AI platform hybrid Local + Kaggle GPU. Mục tiêu là demo end-to-end từ data ingestion đến model serving với observability.
 
+## Cross-day lineage
+
+This Lab 28 submission consolidates the prior Day 16 to Day 27 work into one platform story.
+
+Start with:
+
+- [`docs/day16-day27-integration-map.md`](docs/day16-day27-integration-map.md)
+
+That file maps each previous lab repository to the Lab 28 runtime, evidence, and demo narrative.
+
 ## Rubric focus
 
 | Criteria | Weight | What this repo covers |
