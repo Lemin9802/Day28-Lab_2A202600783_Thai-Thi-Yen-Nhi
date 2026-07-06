@@ -82,7 +82,7 @@ def check_langsmith_configured() -> None:
 
 
 def check_mlflow_initialized() -> None:
-    assert (PROJECT_ROOT / "mlruns").exists(), "Run scripts/06_register_model_mlflow.py first"
+    assert (PROJECT_ROOT / "mlflow.db").exists() or (PROJECT_ROOT / "mlruns").exists(), "Run scripts/06_register_model_mlflow.py first"
 
 
 print("\n=== RELIABILITY ===")
